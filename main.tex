@@ -1,0 +1,66 @@
+\documentclass[12pt,pdftex]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[left=2.5cm,right=2.5cm, top=2cm,bottom=2cm]{geometry}
+
+\RequirePackage{
+,amsmath
+,amssymb
+,array
+,comment
+,csquotes
+,dsfont
+,enumerate
+,fancyhdr
+,graphicx
+,icomma
+,indentfirst
+,mathtext
+,multicol
+,pdfpages
+,pgfplots
+,pgfplotstable
+,refstyle
+,textcomp
+,tikz
+,verbatim
+,wrapfig
+}
+
+\DeclareUnicodeCharacter{2014}{\dash}
+%делаю символ чтд
+
+\pagestyle{empty} 
+\setcounter{page}{0}
+%нумерация страниц
+
+\graphicspath{{pics/}} 
+%дириктория с картинками 
+
+\pgfplotsset{compat=1.16} 
+%штука для графиков
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%для фиксированых колонок в таблицах
+
+\begin{comment}
+\renewcommand\thesection{\arabic{section}.\arabic{subsection}}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+\setcounter{section}{-1}
+\end{comment}
+%секции подсекции и вот это всё говно
+
+\begin{document}
+
+\section*{2}
+\input{tasks/2}
+
+\section*{4 Прямая Гаусса}
+\input{tasks/4}
+
+\section*{5 Йенсен}
+\input{tasks/5}
+
+\end{document}
